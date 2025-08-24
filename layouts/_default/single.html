@@ -1,0 +1,6 @@
+{{ define "main" }}
+<h2>{{ .Title }}</h2>
+<p><small>Опубликовано: {{ .PublishDate.Format "02.01.2006" }}</small></p>
+<div>{{ .Content }}</div>
+<a href="{{ .Site.BaseURL }}posts/">Назад к постам</a>
+{{ end }}

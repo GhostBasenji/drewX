@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ .Site.Title }} | {{ .Title }}</title>
+    <link rel="stylesheet" href="{{ .Site.BaseURL }}css/styles.css">
+</head>
+<body>
+    <header class="header">
+        <h1>{{ .Site.Title }}</h1>
+        <nav>
+            <a href="{{ .Site.BaseURL }}">Главная</a> |
+            <a href="{{ .Site.BaseURL }}posts/">Посты</a>
+        </nav>
+    </header>
+    <div class="container">
+        <main class="main">
+            {{ block "main" . }}{{ end }}
+        </main>
+        <aside class="sidebar">
+            {{ block "sidebar" . }}
+                <h3>Сайдбар</h3>
+                <p>Дополнительная информация.</p>
+            {{ end }}
+        </aside>
+    </div>
+    <footer class="footer">
+        <p>&copy; {{ now.Year }} Мой блог</p>
+    </footer>
+</body>
+</html>
