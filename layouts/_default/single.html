@@ -2,5 +2,11 @@
 <h2>{{ .Title }}</h2>
 <p><small>Опубликовано: {{ .PublishDate.Format "02.01.2006" }}</small></p>
 <div>{{ .Content }}</div>
+<p>
+    <strong>Теги:</strong>
+    {{ range .Params.tags }}
+        <a href="{{ "/tags/" | relURL }}{{ . | urlize }}">{{ . }}</a>
+    {{ end }}
+</p>
 <a href="{{ .Site.BaseURL }}posts/">Назад к постам</a>
 {{ end }}

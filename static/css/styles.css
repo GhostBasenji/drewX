@@ -32,3 +32,18 @@ nav a {
     margin: 0 10px;
     text-decoration: none;
 }
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+.sidebar ul li {
+    margin-bottom: 10px;
+}
+p a {
+    color: #0066cc;
+    text-decoration: none;
+    margin-right: 5px;
+}
+p a:hover {
+    text-decoration: underline;
+}
